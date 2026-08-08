@@ -1,0 +1,10 @@
+[
+  {"category":"Hospital Building","image":"https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=900&q=80","title":"Main Building"},
+  {"category":"OPD","image":"https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=900&q=80","title":"OPD Block"},
+  {"category":"Emergency","image":"https://images.unsplash.com/photo-1666214280254-1f2e7cf0f6ad?auto=format&fit=crop&w=900&q=80","title":"Emergency Unit"},
+  {"category":"Wards","image":"https://images.unsplash.com/photo-1586773860383-dab5f3ce2f67?auto=format&fit=crop&w=900&q=80","title":"Ward Area"},
+  {"category":"Blood Bank","image":"https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=900&q=80","title":"Blood Bank"},
+  {"category":"Laboratory","image":"https://images.unsplash.com/photo-1579165466741-7f35e4755169?auto=format&fit=crop&w=900&q=80","title":"Laboratory"},
+  {"category":"Pharmacy","image":"https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=900&q=80","title":"Pharmacy"},
+  {"category":"Other Facilities","image":"https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&w=900&q=80","title":"Patient Waiting Area"}
+]
