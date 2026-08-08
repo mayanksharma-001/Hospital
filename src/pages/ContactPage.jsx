@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   AMBULANCE_NUMBER,
   BLOOD_BANK_PHONE,
@@ -9,7 +10,6 @@ import {
 import { useLanguage } from '../hooks/useLanguage'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
 import { openHospitalDirections, openHospitalLocation } from '../utils/navigation'
-import { useState } from 'react'
 
 export default function ContactPage() {
   useDocumentTitle('Contact')
@@ -24,21 +24,33 @@ export default function ContactPage() {
         <article className="rounded-lg border border-slate-200 bg-white p-6">
           <h2 className="text-xl font-semibold text-navy">{HOSPITAL_NAME}</h2>
           <ul className="mt-4 space-y-2 text-sm text-slate-700">
-            <li>Address: {HOSPITAL_ADDRESS}</li>
+            <li>{t.common.address}: {HOSPITAL_ADDRESS}</li>
             <li>
-              Phone: <a href={`tel:${HOSPITAL_PHONE}`} className="font-semibold text-govBlue">{HOSPITAL_PHONE}</a>
+              {t.common.phone}:{' '}
+              <a href={`tel:${HOSPITAL_PHONE}`} className="font-semibold text-govBlue">
+                {HOSPITAL_PHONE}
+              </a>
             </li>
             <li>
-              Emergency: <a href={`tel:${HOSPITAL_PHONE}`} className="font-semibold text-govBlue">{HOSPITAL_PHONE}</a>
+              {t.common.emergency}:{' '}
+              <a href={`tel:${HOSPITAL_PHONE}`} className="font-semibold text-govBlue">
+                {HOSPITAL_PHONE}
+              </a>
             </li>
             <li>
-              Ambulance: <a href={`tel:${AMBULANCE_NUMBER}`} className="font-semibold text-govBlue">{AMBULANCE_NUMBER}</a>
+              {t.common.ambulance}:{' '}
+              <a href={`tel:${AMBULANCE_NUMBER}`} className="font-semibold text-govBlue">
+                {AMBULANCE_NUMBER}
+              </a>
             </li>
             <li>
-              Blood Bank: <a href={`tel:${BLOOD_BANK_PHONE}`} className="font-semibold text-govBlue">{BLOOD_BANK_PHONE}</a>
+              {t.common.bloodBank}:{' '}
+              <a href={`tel:${BLOOD_BANK_PHONE}`} className="font-semibold text-govBlue">
+                {BLOOD_BANK_PHONE}
+              </a>
             </li>
-            <li>Email: {HOSPITAL_EMAIL}</li>
-            <li>Working Hours: OPD 9:00 AM - 2:00 PM | Emergency 24×7</li>
+            <li>{t.common.email}: {HOSPITAL_EMAIL}</li>
+            <li>{t.footer.workingHours}</li>
           </ul>
           <div className="mt-6 flex flex-wrap gap-3">
             <button
@@ -46,14 +58,14 @@ export default function ContactPage() {
               onClick={() => openHospitalDirections(() => setError(true))}
               className="rounded-md bg-govBlue px-4 py-2 text-sm font-semibold text-white"
             >
-              Get Directions
+              {t.pages.contact.directions}
             </button>
             <button
               type="button"
               onClick={openHospitalLocation}
               className="rounded-md border border-slate-300 px-4 py-2 text-sm"
             >
-              Open Hospital Location
+              {t.pages.contact.openLocation}
             </button>
           </div>
 
@@ -62,7 +74,7 @@ export default function ContactPage() {
 
         <article className="overflow-hidden rounded-lg border border-slate-200 bg-white p-2">
           <iframe
-            title="District Government Hospital location"
+            title={`${HOSPITAL_NAME} location`}
             src="https://www.google.com/maps?q=28.2898,74.9594&z=15&output=embed"
             className="h-[360px] w-full rounded-md border-0"
             loading="lazy"

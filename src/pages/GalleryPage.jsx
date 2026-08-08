@@ -2,31 +2,44 @@ import { useMemo, useState } from 'react'
 import { FaTimes } from 'react-icons/fa'
 import gallery from '../data/gallery.json'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
+import { useLanguage } from '../hooks/useLanguage'
+
+const ALL_CATEGORY = '__all__'
 
 export default function GalleryPage() {
+  const { t } = useLanguage()
   useDocumentTitle('Gallery')
   const [selected, setSelected] = useState(null)
-  const categories = useMemo(() => ['All', ...new Set(gallery.map((item) => item.category))], [])
-  const [activeCategory, setActiveCategory] = useState('All')
+  const categories = useMemo(
+    () => [
+      { value: ALL_CATEGORY, label: t.common.all },
+      ...Array.from(new Set(gallery.map((item) => item.category)), (category) => ({
+        value: category,
+        label: category,
+      })),
+    ],
+    [t.common.all],
+  )
+  const [activeCategory, setActiveCategory] = useState(ALL_CATEGORY)
 
   const filtered =
-    activeCategory === 'All' ? gallery : gallery.filter((item) => item.category === activeCategory)
+    activeCategory === ALL_CATEGORY ? gallery : gallery.filter((item) => item.category === activeCategory)
 
   return (
     <section className="mx-auto mt-[74px] max-w-7xl px-4 py-14 lg:px-6">
-      <h1 className="text-3xl font-bold text-navy md:text-4xl">Photo Gallery</h1>
+      <h1 className="text-3xl font-bold text-navy md:text-4xl">{t.pages.gallery.title}</h1>
 
       <div className="mt-6 flex flex-wrap gap-2">
         {categories.map((category) => (
           <button
             type="button"
-            key={category}
-            onClick={() => setActiveCategory(category)}
+            key={category.value}
+            onClick={() => setActiveCategory(category.value)}
             className={`rounded-full px-4 py-1.5 text-sm ${
-              activeCategory === category ? 'bg-govBlue text-white' : 'bg-slate-100 text-slate-700'
+              activeCategory === category.value ? 'bg-govBlue text-white' : 'bg-slate-100 text-slate-700'
             }`}
           >
-            {category}
+            {category.label}
           </button>
         ))}
       </div>
@@ -51,7 +64,7 @@ export default function GalleryPage() {
               type="button"
               onClick={() => setSelected(null)}
               className="absolute right-4 top-4 rounded-full bg-slate-100 p-2"
-              aria-label="Close image"
+              aria-label={t.common.closeImage}
             >
               <FaTimes />
             </button>
