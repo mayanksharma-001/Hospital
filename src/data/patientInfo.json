@@ -1,0 +1,18 @@
+[
+  {
+    "title": "What to Bring During Visit",
+    "items": ["Government ID proof", "Previous prescriptions/reports", "Referral slip (if any)", "Current medication list"]
+  },
+  {
+    "title": "OPD Process Overview",
+    "items": ["Register at OPD counter", "Collect token/queue number", "Consult doctor", "Proceed to diagnostics/pharmacy if advised"]
+  },
+  {
+    "title": "Emergency Guidance",
+    "items": ["Use emergency entrance", "Call ambulance 108 for urgent transport", "Carry known allergy/history details if possible"]
+  },
+  {
+    "title": "Visiting Hours & Rules",
+    "items": ["Follow ward visiting hours", "Maintain cleanliness and silence", "No smoking or prohibited substances", "Only one attendant where required"]
+  }
+]

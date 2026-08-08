@@ -1,0 +1,18 @@
+[
+  {"name":"General Medicine","description":"Comprehensive diagnosis and treatment for adult medical conditions.","timing":"9:00 AM - 2:00 PM"},
+  {"name":"General Surgery","description":"Surgical consultation and elective/minor procedure support.","timing":"10:00 AM - 1:00 PM"},
+  {"name":"Orthopedics","description":"Bone, joint and trauma care for fractures and musculoskeletal issues.","timing":"9:30 AM - 1:30 PM"},
+  {"name":"Pediatrics","description":"Healthcare and immunization support for infants and children.","timing":"9:00 AM - 1:00 PM"},
+  {"name":"Gynecology & Obstetrics","description":"Women’s healthcare, antenatal and maternal care services.","timing":"10:00 AM - 2:00 PM"},
+  {"name":"ENT","description":"Ear, nose and throat consultation and basic procedures.","timing":"9:00 AM - 12:30 PM"},
+  {"name":"Ophthalmology","description":"Eye examinations, screening and referral support.","timing":"9:30 AM - 12:30 PM"},
+  {"name":"Dermatology","description":"Skin, allergy and infection treatment services.","timing":"10:00 AM - 1:00 PM"},
+  {"name":"Dental","description":"Oral health checkups, extraction and preventive care.","timing":"9:00 AM - 1:00 PM"},
+  {"name":"Radiology","description":"X-ray and imaging support for clinical diagnosis.","timing":"24 Hours"},
+  {"name":"Pathology","description":"Laboratory diagnostics for blood and routine investigations.","timing":"8:00 AM - 4:00 PM"},
+  {"name":"Emergency Medicine","description":"24×7 emergency stabilization and urgent care.","timing":"24 Hours"},
+  {"name":"Anesthesia","description":"Perioperative anesthesia and critical support services.","timing":"On Call"},
+  {"name":"Psychiatry","description":"Mental health screening, counseling and treatment support.","timing":"11:00 AM - 2:00 PM"},
+  {"name":"Cardiology","description":"Cardiac risk screening and referral-based consultations.","timing":"11:00 AM - 1:00 PM"},
+  {"name":"Other Available Departments","description":"Additional specialty clinics are scheduled periodically.","timing":"As Notified"}
+]

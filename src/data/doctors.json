@@ -1,0 +1,8 @@
+[
+  {"name":"Dr. R. Sharma","designation":"Senior Specialist","department":"General Medicine","qualification":"MBBS, MD (Medicine)","opdTiming":"9:00 AM - 1:00 PM","days":"Mon, Wed, Fri","photo":"https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=500&q=80"},
+  {"name":"Dr. S. Meena","designation":"Consultant","department":"Gynecology & Obstetrics","qualification":"MBBS, MS (OBG)","opdTiming":"10:00 AM - 2:00 PM","days":"Mon to Thu","photo":"https://images.unsplash.com/photo-1651008376796-7876f2f84d58?auto=format&fit=crop&w=500&q=80"},
+  {"name":"Dr. A. Singh","designation":"Orthopedic Surgeon","department":"Orthopedics","qualification":"MBBS, MS (Ortho)","opdTiming":"9:30 AM - 1:30 PM","days":"Tue to Sat","photo":"https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=500&q=80"},
+  {"name":"Dr. P. Verma","designation":"Pediatric Specialist","department":"Pediatrics","qualification":"MBBS, DCH","opdTiming":"9:00 AM - 12:00 PM","days":"Mon to Sat","photo":"https://images.unsplash.com/photo-1594824475544-3bb59fb54864?auto=format&fit=crop&w=500&q=80"},
+  {"name":"Dr. K. Choudhary","designation":"ENT Consultant","department":"ENT","qualification":"MBBS, MS (ENT)","opdTiming":"9:00 AM - 12:30 PM","days":"Mon, Tue, Thu","photo":"https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80"},
+  {"name":"Dr. N. Khan","designation":"Consultant Surgeon","department":"General Surgery","qualification":"MBBS, MS (Surgery)","opdTiming":"10:00 AM - 1:00 PM","days":"Mon to Fri","photo":"https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=500&q=80"}
+]

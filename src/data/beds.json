@@ -1,0 +1,9 @@
+[
+  {"ward":"ICU","total":20,"occupied":17},
+  {"ward":"General Ward","total":120,"occupied":92},
+  {"ward":"Emergency","total":30,"occupied":21},
+  {"ward":"Pediatric Ward","total":25,"occupied":16},
+  {"ward":"Female Ward","total":40,"occupied":29},
+  {"ward":"Male Ward","total":45,"occupied":33},
+  {"ward":"Other Wards","total":35,"occupied":20}
+]
