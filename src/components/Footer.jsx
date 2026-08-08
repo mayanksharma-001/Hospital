@@ -9,15 +9,15 @@ import {
 import { useLanguage } from '../hooks/useLanguage'
 
 const quickLinks = [
-  ['/', 'Home'],
-  ['/about', 'About'],
-  ['/departments', 'Departments'],
-  ['/doctors', 'Doctors'],
-  ['/facilities', 'Facilities'],
-  ['/blood-bank', 'Blood Bank'],
-  ['/beds', 'Bed Availability'],
-  ['/opd-schedule', 'OPD'],
-  ['/contact', 'Contact'],
+  ['/', 'home'],
+  ['/about', 'about'],
+  ['/departments', 'departments'],
+  ['/doctors', 'doctors'],
+  ['/facilities', 'facilities'],
+  ['/blood-bank', 'bloodBank'],
+  ['/beds', 'beds'],
+  ['/opd-schedule', 'opd'],
+  ['/contact', 'contact'],
 ]
 
 export default function Footer() {
@@ -31,42 +31,51 @@ export default function Footer() {
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-govBlue">DH</div>
             <div>
               <p className="font-semibold">{HOSPITAL_NAME}</p>
-              <p className="text-sm text-slate-400">Churu, Rajasthan</p>
+              <p className="text-sm text-slate-400">{t.navbar.location}</p>
             </div>
           </div>
         </div>
 
         <div>
-          <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">Quick Links</h3>
+          <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">{t.footer.quickLinks}</h3>
           <div className="grid gap-2 text-sm">
             {quickLinks.map(([path, label]) => (
               <Link key={path} to={path} className="hover:text-white">
-                {label}
+                {t.navbar[label]}
               </Link>
             ))}
           </div>
         </div>
 
         <div>
-          <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">Important</h3>
+          <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">{t.footer.important}</h3>
           <ul className="space-y-2 text-sm">
-            <li>Emergency: {HOSPITAL_PHONE}</li>
-            <li>Ambulance: {AMBULANCE_NUMBER}</li>
-            <li>Blood Bank: {BLOOD_BANK_PHONE}</li>
+            <li>
+              {t.common.emergency}: {HOSPITAL_PHONE}
+            </li>
+            <li>
+              {t.common.ambulance}: {AMBULANCE_NUMBER}
+            </li>
+            <li>
+              {t.common.bloodBank}: {BLOOD_BANK_PHONE}
+            </li>
             <li>{t.onlineServices.title}</li>
           </ul>
         </div>
 
         <div>
-          <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">Contact</h3>
+          <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-400">{t.footer.contact}</h3>
           <p className="text-sm leading-relaxed">{HOSPITAL_ADDRESS}</p>
-          <p className="mt-3 text-sm">Language: English | हिन्दी</p>
+          <p className="mt-3 text-sm">
+            {t.common.language}: {t.navbar.languageToggle}
+          </p>
+          <p className="mt-2 text-sm">{t.footer.workingHours}</p>
         </div>
       </div>
 
       <div className="mx-auto mt-10 max-w-7xl border-t border-slate-700 pt-5 text-sm text-slate-400">
-        <p>© District Government Hospital, Churu, Rajasthan</p>
-        <p className="mt-2">{t.footerDisclaimer}</p>
+        <p>{t.footer.copyright}</p>
+        <p className="mt-2">{t.footer.disclaimer}</p>
       </div>
     </footer>
   )

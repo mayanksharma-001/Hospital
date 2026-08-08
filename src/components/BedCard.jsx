@@ -1,4 +1,7 @@
+import { useLanguage } from '../hooks/useLanguage'
+
 export default function BedCard({ bed }) {
+  const { t } = useLanguage()
   const available = bed.total - bed.occupied
   const percentage = Math.max(0, Math.round((available / bed.total) * 100))
 
@@ -6,13 +9,13 @@ export default function BedCard({ bed }) {
     <article className="rounded-lg border border-slate-200 bg-white p-5">
       <h3 className="text-lg font-semibold text-navy">{bed.ward}</h3>
       <p className="mt-2 text-sm text-slate-700">
-        {available} / {bed.total} Available
+        {available} / {bed.total} {t.cards.bedAvailable}
       </p>
       <div className="mt-3 h-2 rounded-full bg-slate-200">
         <div className="h-2 rounded-full bg-govBlue" style={{ width: `${percentage}%` }} />
       </div>
       <div className="mt-3 text-xs text-slate-600">
-        Occupied: {bed.occupied} | Total: {bed.total}
+        {t.cards.occupied}: {bed.occupied} | {t.cards.total}: {bed.total}
       </div>
     </article>
   )

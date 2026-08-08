@@ -14,11 +14,11 @@ export default function EmergencyBanner() {
       <div className="mx-auto max-w-7xl rounded-lg border border-red-200 bg-white p-6">
         <h2 className="text-2xl font-bold text-navy">{t.emergency.title}</h2>
         <div className="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-          <Info label="Emergency Number" value={HOSPITAL_PHONE} phone />
-          <Info label="Ambulance" value={AMBULANCE_NUMBER} phone />
-          <Info label="Hospital Reception" value={HOSPITAL_PHONE} phone />
-          <Info label="Blood Bank" value={BLOOD_BANK_PHONE} phone />
-          <Info label="Address" value={HOSPITAL_ADDRESS} />
+          <Info label={t.emergency.emergencyNumber} value={HOSPITAL_PHONE} phone />
+          <Info label={t.emergency.ambulance} value={AMBULANCE_NUMBER} phone />
+          <Info label={t.emergency.reception} value={HOSPITAL_PHONE} phone />
+          <Info label={t.emergency.bloodBank} value={BLOOD_BANK_PHONE} phone />
+          <Info label={t.emergency.address} value={HOSPITAL_ADDRESS} />
         </div>
       </div>
     </section>

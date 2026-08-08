@@ -2,16 +2,15 @@ import { useMemo, useState } from 'react'
 import DoctorCard from '../components/DoctorCard'
 import doctors from '../data/doctors.json'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function DoctorsPage() {
+  const { t } = useLanguage()
   useDocumentTitle('Doctors Directory')
   const [query, setQuery] = useState('')
   const [department, setDepartment] = useState('all')
 
-  const departments = useMemo(
-    () => ['all', ...new Set(doctors.map((doctor) => doctor.department))],
-    [],
-  )
+  const departments = useMemo(() => ['all', ...new Set(doctors.map((doctor) => doctor.department))], [])
 
   const filtered = useMemo(
     () =>
@@ -25,15 +24,15 @@ export default function DoctorsPage() {
 
   return (
     <section className="mx-auto mt-[74px] max-w-7xl px-4 py-14 lg:px-6">
-      <h1 className="text-3xl font-bold text-navy md:text-4xl">Doctors Directory</h1>
-      <p className="mt-3 text-slate-700">Find doctors by name and department with OPD schedule details.</p>
+      <h1 className="text-3xl font-bold text-navy md:text-4xl">{t.pages.doctors.title}</h1>
+      <p className="mt-3 text-slate-700">{t.pages.doctors.subtitle}</p>
 
       <div className="mt-6 grid gap-3 md:grid-cols-2">
         <input
           type="search"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
-          placeholder="Search doctor"
+          placeholder={t.common.searchDoctor}
           className="rounded-md border border-slate-300 px-4 py-2 outline-none focus:border-govBlue"
         />
         <select
@@ -43,7 +42,7 @@ export default function DoctorsPage() {
         >
           {departments.map((item) => (
             <option key={item} value={item}>
-              {item === 'all' ? 'All Departments' : item}
+              {item === 'all' ? t.common.allDepartments : item}
             </option>
           ))}
         </select>

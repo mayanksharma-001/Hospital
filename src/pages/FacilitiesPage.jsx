@@ -1,15 +1,17 @@
 import { FaHospitalAlt } from 'react-icons/fa'
-import facilities from '../data/facilities.json'
 import gallery from '../data/gallery.json'
+import facilities from '../data/facilities.json'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function FacilitiesPage() {
+  const { t } = useLanguage()
   useDocumentTitle('Facilities')
 
   return (
     <section className="mx-auto mt-[74px] max-w-7xl px-4 py-14 lg:px-6">
-      <h1 className="text-3xl font-bold text-navy md:text-4xl">Facilities</h1>
-      <p className="mt-3 text-slate-700">Core medical and patient-care facilities available in the hospital.</p>
+      <h1 className="text-3xl font-bold text-navy md:text-4xl">{t.pages.facilities.title}</h1>
+      <p className="mt-3 text-slate-700">{t.pages.facilities.subtitle}</p>
 
       <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
         {facilities.map((facility) => (

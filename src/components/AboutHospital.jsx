@@ -1,41 +1,34 @@
 import { Link } from 'react-router-dom'
 import { HERO_IMAGES } from '../config/siteConfig'
+import { useLanguage } from '../hooks/useLanguage'
 import AnimatedSection from './AnimatedSection'
 
-const stats = [
-  { label: 'Total Beds', value: '270+' },
-  { label: 'Departments', value: '16+' },
-  { label: 'Doctors', value: '45+' },
-  { label: '24×7 Emergency', value: 'Available' },
-]
-
 export default function AboutHospital() {
+  const { t } = useLanguage()
+
+  const stats = [
+    { label: t.aboutHospital.stats.totalBeds, value: '270+' },
+    { label: t.aboutHospital.stats.departments, value: '16+' },
+    { label: t.aboutHospital.stats.doctors, value: '45+' },
+    { label: t.aboutHospital.stats.emergency, value: t.aboutHospital.stats.available },
+  ]
+
   return (
     <AnimatedSection className="px-4 py-14 lg:px-6">
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2 lg:items-center">
         <img
           src={HERO_IMAGES[0]}
-          alt="District Government Hospital building"
+          alt={t.navbar.hospitalName}
           loading="lazy"
           className="h-full min-h-[320px] w-full rounded-lg object-cover"
         />
 
         <div>
-          <h2 className="text-3xl font-bold text-navy">About Hospital</h2>
-          <p className="mt-4 text-slate-700">
-            District Government Hospital, Churu serves as a key public healthcare institution for
-            the district population. The hospital provides OPD services, emergency care, maternal
-            and child care, diagnostics, blood bank support and inpatient facilities.
-          </p>
-          <p className="mt-3 text-slate-700">
-            Located in Churu, Rajasthan, the hospital focuses on accessible, affordable and
-            equitable healthcare delivery aligned with public health priorities.
-          </p>
-          <Link
-            to="/about"
-            className="mt-6 inline-flex rounded-md bg-govBlue px-4 py-2 text-sm font-semibold text-white"
-          >
-            Know More
+          <h2 className="text-3xl font-bold text-navy">{t.aboutHospital.title}</h2>
+          <p className="mt-4 text-slate-700">{t.aboutHospital.paragraphOne}</p>
+          <p className="mt-3 text-slate-700">{t.aboutHospital.paragraphTwo}</p>
+          <Link to="/about" className="mt-6 inline-flex rounded-md bg-govBlue px-4 py-2 text-sm font-semibold text-white">
+            {t.aboutHospital.knowMore}
           </Link>
         </div>
       </div>

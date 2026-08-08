@@ -1,12 +1,14 @@
 import patientInfo from '../data/patientInfo.json'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function PatientInfoPage() {
+  const { t } = useLanguage()
   useDocumentTitle('Patient Information')
 
   return (
     <section className="mx-auto mt-[74px] max-w-7xl px-4 py-14 lg:px-6">
-      <h1 className="text-3xl font-bold text-navy md:text-4xl">Patient Information</h1>
+      <h1 className="text-3xl font-bold text-navy md:text-4xl">{t.pages.patientInfo.title}</h1>
       <div className="mt-8 grid gap-4 md:grid-cols-2">
         {patientInfo.map((section) => (
           <article key={section.title} className="rounded-lg border border-slate-200 bg-white p-5">

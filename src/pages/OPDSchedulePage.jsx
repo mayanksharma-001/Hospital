@@ -1,27 +1,29 @@
 import { APPOINTMENT_URL } from '../config/siteConfig'
 import doctors from '../data/doctors.json'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
+import { useLanguage } from '../hooks/useLanguage'
 import { openAppointment } from '../utils/navigation'
 
 export default function OPDSchedulePage() {
+  const { t } = useLanguage()
   useDocumentTitle('OPD Schedule')
 
   return (
     <section className="mx-auto mt-[74px] max-w-7xl px-4 py-14 lg:px-6">
-      <h1 className="text-3xl font-bold text-navy md:text-4xl">OPD Schedule</h1>
+      <h1 className="text-3xl font-bold text-navy md:text-4xl">{t.pages.opd.title}</h1>
       <p className="mt-3 rounded-md border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">
-        OPD timings may change. Please verify the schedule before visiting the hospital.
+        {t.pages.opd.note}
       </p>
 
       <div className="mt-6 overflow-x-auto rounded-lg border border-slate-200">
         <table className="min-w-full bg-white text-left text-sm">
           <thead className="bg-slate-100 text-navy">
             <tr>
-              <th className="px-4 py-3">Department</th>
-              <th className="px-4 py-3">Doctor</th>
-              <th className="px-4 py-3">Days</th>
-              <th className="px-4 py-3">Morning Timing</th>
-              <th className="px-4 py-3">Afternoon Timing</th>
+              <th className="px-4 py-3">{t.pages.opd.table.department}</th>
+              <th className="px-4 py-3">{t.pages.opd.table.doctor}</th>
+              <th className="px-4 py-3">{t.pages.opd.table.days}</th>
+              <th className="px-4 py-3">{t.pages.opd.table.morning}</th>
+              <th className="px-4 py-3">{t.pages.opd.table.afternoon}</th>
             </tr>
           </thead>
           <tbody>
@@ -47,7 +49,7 @@ export default function OPDSchedulePage() {
         onClick={() => openAppointment(APPOINTMENT_URL)}
         className="mt-6 rounded-md bg-govBlue px-4 py-2 text-sm font-semibold text-white"
       >
-        Book Appointment
+        {t.navbar.appointment}
       </button>
     </section>
   )
