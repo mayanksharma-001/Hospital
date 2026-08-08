@@ -1,5 +1,5 @@
 import { APPOINTMENT_URL } from '../config/siteConfig'
-import { useLanguage } from '../context/LanguageContext'
+import { useLanguage } from '../hooks/useLanguage'
 import { openAppointment } from '../utils/navigation'
 
 export default function OnlineServicesSection() {

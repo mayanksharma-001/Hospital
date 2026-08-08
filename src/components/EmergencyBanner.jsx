@@ -4,7 +4,7 @@ import {
   HOSPITAL_ADDRESS,
   HOSPITAL_PHONE,
 } from '../config/siteConfig'
-import { useLanguage } from '../context/LanguageContext'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function EmergencyBanner() {
   const { t } = useLanguage()

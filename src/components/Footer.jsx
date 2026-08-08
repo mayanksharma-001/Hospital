@@ -6,7 +6,7 @@ import {
   HOSPITAL_NAME,
   HOSPITAL_PHONE,
 } from '../config/siteConfig'
-import { useLanguage } from '../context/LanguageContext'
+import { useLanguage } from '../hooks/useLanguage'
 
 const quickLinks = [
   ['/', 'Home'],
