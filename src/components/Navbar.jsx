@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { HiMenu, HiX } from 'react-icons/hi'
 import { APPOINTMENT_URL } from '../config/siteConfig'
-import { useLanguage } from '../context/LanguageContext'
+import { useLanguage } from '../hooks/useLanguage'
 import { openAppointment } from '../utils/navigation'
 
 const links = [

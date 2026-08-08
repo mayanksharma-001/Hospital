@@ -6,7 +6,7 @@ import {
   HOSPITAL_NAME,
   HOSPITAL_PHONE,
 } from '../config/siteConfig'
-import { useLanguage } from '../context/LanguageContext'
+import { useLanguage } from '../hooks/useLanguage'
 import { useDocumentTitle } from '../hooks/useDocumentTitle'
 import { openHospitalDirections, openHospitalLocation } from '../utils/navigation'
 import { useState } from 'react'

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FaChevronDown } from 'react-icons/fa'
 import faqs from '../data/faq.json'
-import { useLanguage } from '../context/LanguageContext'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function FAQSection() {
   const [open, setOpen] = useState(0)

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { APPOINTMENT_URL, HERO_IMAGES } from '../config/siteConfig'
-import { useLanguage } from '../context/LanguageContext'
+import { useLanguage } from '../hooks/useLanguage'
 import { openAppointment, openHospitalDirections, openHospitalLocation } from '../utils/navigation'
 
 export default function HeroSlider() {
